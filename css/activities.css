@@ -122,8 +122,8 @@ h3 {
 }
 
 .activities img {
-  width: 250px;
   padding: 10px;
+  height: 250px;
 }
 
 .activity {
@@ -139,7 +139,10 @@ h3 {
   bottom: 10px;
   flex: 1;
   margin: 10px;
-  font-size: 12px;
+  font-size: 15px;
+}
+.activities p {
+  padding: 3px;
 }
 
 .More {
