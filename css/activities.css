@@ -1,6 +1,6 @@
 body {
   font-family: "Bahnschrift", sans-serif;
-  
+
 }
 
 * {
@@ -21,6 +21,7 @@ nav {
   bottom: 0;
   position: fixed;
   width: 100%;
+  border-top: 3px solid rgba(26, 97, 107, 0.6);
 }
 
 nav ul {
@@ -42,19 +43,16 @@ nav a {
 }
 
 .topnav img {
-  padding: 20px;
   width: 75%;
-  display: block;
-  margin: auto;
 }
+
 .topnav {
   display: flex;
-  justify-content: space-between;
-}
-.topnav div {
-  display: flex;
+  justify-content: space-around;
   align-items: center;
+  margin-top: 10px;
 }
+
 .topnav a {
   padding: 5px;
   text-decoration: none;
@@ -66,25 +64,25 @@ nav a {
 #home {
   margin: 50px;
 }
+
 .search-container input[type="text"] {
   padding: 6px;
-  margin-right: 10px;
   font-size: 17px;
   border: 1px solid black;
-  border-radius: 5px;
-  opacity: 50%;
-  width: 350px;
+  width: 300px;
 }
 
 .search-container button:hover {
   background: #ccc;
 }
+
 .search-container {
   display: flex;
   align-items: center;
   margin-top: 20px;
   justify-content: center;
 }
+
 .input-group {
   position: relative;
   display: flex;
@@ -116,11 +114,10 @@ nav a {
   margin: 10px;
   display: flex;
   flex-wrap: nowrap;
-  background-color: rgba(26, 97, 107, 0.09);
-  padding: 15px;
 }
+
 h3 {
-  margin: 25px;
+  margin: 20px;
   font-size: 25px;
 }
 
@@ -132,6 +129,7 @@ h3 {
 .activity {
   position: relative;
 }
+
 .activity-text {
   background-color: white;
   opacity: 90%;
@@ -144,6 +142,7 @@ h3 {
   margin: 10px;
   font-size: 15px;
 }
+
 .activities p {
   padding: 3px;
 }
@@ -177,31 +176,33 @@ h3 {
   padding-bottom: 100px;
   margin: 10px;
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
 }
 
 .exhibitions img {
   padding: 10px;
   height: 40%;
   width: 40%;
-
-    
 }
 
 .exhibition {
   display: flex;
 }
+
 .exhibition p {
   padding: 15px 0;
   font-size: 16px;
 }
+
 h4 {
   font-size: 20px;
 }
 
 .exhi-text {
-  padding: 10px 0;
-  text-align: start;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .exhibition button {
@@ -213,3 +214,7 @@ h4 {
   font-size: 16px;
 }
 
+.enjoyh {
+  text-align: center;
+  color: rgba(26, 97, 107, 0.9);
+}
