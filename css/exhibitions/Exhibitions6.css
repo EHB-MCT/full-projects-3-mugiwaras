@@ -73,4 +73,6 @@ a.active  {
     justify-content: center;
     margin-top: 5%;
     margin-left: 5%;
+    box-shadow: 0px 0px 5px black;
+
   }
