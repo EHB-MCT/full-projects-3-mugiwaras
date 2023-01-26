@@ -218,3 +218,13 @@ h4 {
   text-align: center;
   color: rgba(26, 97, 107, 0.9);
 }
+
+
+.gezza {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 92%;
+
+}
