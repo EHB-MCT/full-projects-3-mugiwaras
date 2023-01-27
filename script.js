@@ -3,6 +3,12 @@ window.onload = function () {
   setup();
 };
 
+
+
+
+
+
+
 function setup() {
   const image = document.querySelector(".placeholder img");
   const text = document.querySelector(".info-text p");
