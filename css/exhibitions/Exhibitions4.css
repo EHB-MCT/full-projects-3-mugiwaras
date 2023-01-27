@@ -44,6 +44,8 @@ body {
   }
   .text p {
     padding-top: 25px;
+    font-size: 20px;
+
   }
  
  button {
@@ -56,6 +58,8 @@ body {
     background-color: #CB2F06;
     width: 75%;
     margin-bottom: 30px;
+    font-size: 20px;
+
  }
 a.active  {
     border-bottom: solid black 2px;

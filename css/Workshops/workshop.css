@@ -8,7 +8,7 @@ body{
   background-repeat: no-repeat;
   position: absolute;
   margin: 0;
-  font-family: "Bahnschrift";
+  font-family: "Bahnschrift", sans-serif;
 }
 
 .back {
