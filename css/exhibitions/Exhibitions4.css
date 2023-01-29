@@ -1,83 +1,97 @@
 body {
-    font-family: "Bahnschrift", sans-serif;
-    background-image: url("/images/details4.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: absolute;
-    background-position-y: 30%;
-  
-    
-  }
-  
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
+  font-family: "Bahnschrift", sans-serif;
+  background-image: url("/images/details4.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  background-position-y: 30%;
 
-  .background {
-    width  : 100vw;
-  height : 65vh;
-  background : white;
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.background {
+  width: 100vw;
+  height: 65vh;
+  background: white;
   border-radius: 25px 25px 0 0;
   z-index: 1;
   margin-top: 60%;
   padding: 10%;
-  }
-  .background .text , .head   {
-    padding-top: 20px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    
-  }
-  .head {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  a {
-    text-decoration: none;
-    color: black;
-
-  }
-  .text p {
-    padding-top: 25px;
-    font-size: 20px;
-
-  }
- 
- button {
-    margin-top: 50px;
-    margin-left: 10%;
-    padding: 10px;
-    border-radius: 20px;
-    border-style: none;
-    color: white;
-    background-color: #CB2F06;
-    width: 75%;
-    margin-bottom: 30px;
-    font-size: 20px;
-
- }
-a.active  {
-    border-bottom: solid black 2px;
 }
-.back {
-    display: flex;
-    position: fixed;
-    background-color: white;
-    opacity: 90%;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 15px;
-    padding-right: 15px;
-    border-radius: 5px;
-    align-items: center;
-    justify-content: center;
-    margin-top: 5%;
-    margin-left: 5%;
-    box-shadow: 0px 0px 5px black;
 
-  }
+.background .text,
+.head {
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+}
+
+.head {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+
+}
+
+.text p {
+  padding-top: 25px;
+  font-size: 20px;
+
+}
+
+button {
+  margin-top: 20px;
+  margin-left: 10%;
+  padding: 10px;
+  border-radius: 20px;
+  border-style: none;
+  color: white;
+  background-color: #CB2F06;
+  font-size: 20px;
+  width: 75%;
+  margin-bottom: 20px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.lastp {
+  margin-bottom: 100px;
+}
+
+a.active {
+  border-bottom: solid black 2px;
+}
+
+.back {
+  display: flex;
+  position: fixed;
+  background-color: white;
+  opacity: 90%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5%;
+  margin-left: 5%;
+  box-shadow: 0px 0px 5px black;
+
+}
