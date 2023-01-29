@@ -27,12 +27,16 @@
         #qr-reader {
             border: none !important;
 
+            /*display: flex !important;
+            flex-direction: column !important;*/
         }
 
         #qr-reader div:first-child {
             border-bottom: none !important;
-        }
 
+
+
+        }
 
         #qr-reader_dashboard {
             background-color: red;
@@ -47,7 +51,33 @@
         }
 
         #qr-reader__status_span {
-            background-color: red !important;
+            /*background-color: transparent !important;
+            margin: auto !important;*/
+            display: none;
+
+        }
+
+        #qr-reader button {
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 20px;
+            border-style: none;
+            color: white;
+            background-color: rgba(26, 97, 107, 0.9);
+            font-size: 15px;
+        }
+
+        .scangif {
+            text-align: center;
+        }
+
+        .scangif img {
+            width: 80%;
+        }
+
+        .scangif p {
+            margin-bottom: 100px;
+            margin: 0 30px;
         }
     </style>
 </head>
@@ -66,7 +96,10 @@
 
     <div id="qr-reader" style="width: 100%"></div>
 
-
+    <div class="scangif">
+        <img src="images/scanqr.gif">
+        <p>Scan the QR-code at the kiosk to get your chosen route on your smartphone.</p>
+    </div>
 
 
 
