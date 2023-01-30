@@ -5,10 +5,6 @@ window.onload = function () {
 
 
 
-
-
-
-
 function setup() {
   const image = document.querySelector(".placeholder img");
   const text = document.querySelector(".info-text p");
@@ -38,9 +34,6 @@ function setup() {
     if (clickCount % 2 === 0) {
       location.href = "index.html";
       location.href = "./home.html";
-
-
-
     }
   });
 }
