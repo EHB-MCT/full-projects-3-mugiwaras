@@ -15,25 +15,27 @@ const port = process.env.PORT || 1337;
 
 app.get('/museumExhibitions', async (req, res) => {
     try {
-        //connect to the db
+        // Connectez-vous à la base de données
         await client.connect();
-        //retrieve the muzzys collection data
-        const colli = client.db('museum').collection('museumExhibitions');
-        const muzzys = await colli.find({}).toArray();
 
-        //send back the data with response
-        res.status(200).send(muzzys);
-        console.log("Data from Museum Exhibitions Collection: ", muzzys);
+        // Récupérez les données de la collection
+        const coll = client.db('museum').collection('museumExhibitions');
+        const exhibitions = await coll.find({}).toArray();
+
+        // Envoyez les données en réponse
+        res.status(200).send(exhibitions);
     } catch (error) {
-
+        // Gestion des erreurs
         res.status(500).send({
-            error: 'something went wrong',
+            error: 'Something went wrong',
             value: error
         });
     } finally {
+        // Fermez la connexion à la base de données
         await client.close();
     }
-})
+});
+
 
 
 
