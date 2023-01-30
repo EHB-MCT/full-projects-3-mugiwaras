@@ -30,9 +30,10 @@ function setup() {
     text.textContent = texts[imageIndex];
 
     // next page
-    if (clickCount % 2 === 0) {
-      location.href = "index.html";
+    if (clickCount % 3 === 0) {
       location.href = "./home.html";
+      round.style.backgroundColor = "rgba(44,44,44,0.5)";
+
     }
   });
 }
