@@ -10,8 +10,8 @@ function setup() {
   let imageIndex = 0;
   let clickCount = 0;
   const texts = [
-    "Find your way through history ",
-    "Discover our exciting activites",
+    "Find your way through history",
+    "Discover our exciting activities",
     "Stay updated on our exhibitions",
   ];
   const images = ["06032016-DSC_5246.jpg", "museum2.jpg", "museum3.jpg"];
