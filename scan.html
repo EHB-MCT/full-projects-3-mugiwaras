@@ -14,7 +14,7 @@
         /*#interactive.viewport {
             position: relative;
             width: 100%;
-            height: auto;
+            height: auto; 
             overflow: hidden;
             text-align: center;
         }
@@ -26,9 +26,6 @@
 
         #qr-reader {
             border: none !important;
-
-            /*display: flex !important;
-            flex-direction: column !important;*/
         }
 
         #qr-reader div:first-child {
@@ -105,14 +102,17 @@
 
 
 
-
-
-
-
     <script>
         function onScanSuccess(decodedText) {
             alert("Code scanné: " + decodedText);
-            window.location.href = 'pasEncore/getDirection.html';
+
+            localStorage.setItem("mapLink", decodedText);
+            window.location.href = "../mapWithDirection.html";
+
+            var mapViewerIframe = document.getElementById("map-viewer-iframe");
+            if (mapViewerIframe) {
+                if (localStorage.getItem("mapLink")) {}
+            }
         }
 
         var html5QrcodeScanner = new Html5QrcodeScanner("qr-reader", {

@@ -2,7 +2,7 @@
 
 window.onload = function () {
 
-    //change sessionstorage to load New chosen direction
+    //change sessionstorage to load New chosen direction 
 
     var firstDirection = document.getElementById("firstDirection");
     var secondDirection = document.getElementById("secondDirection");
