@@ -1,21 +1,21 @@
 "use strict";
 
 window.onload = function () {
-    fetchActivitiesData();
+  fetchActivitiesData();
 
 
-    async function fetchActivitiesData() {
-        document.querySelector("#slider-container").innerHTML = '<img src="images/Spinner-1s-200px.gif" alt="Loading">';
+  async function fetchActivitiesData() {
+    document.querySelector("#slider-container").innerHTML = '<img src="images/Spinner-1s-200px.gif" alt="Loading">';
 
-        await fetch("http://localhost:3000/museumActivities")
-            .then(response => response.json())
-            .then(data => {
+    await fetch("http://localhost:3000/museumActivities")
+      .then(response => response.json())
+      .then(data => {
 
-                let activitiesHTML = "";
-                // Traitez les données reçues ici
-                // Par exemple, bouclez sur chaque objet dans le tableau de données et ajoutez-le à votre HTML
-                data.forEach(function (activity) {
-                    activitiesHTML += `
+        let activitiesHTML = "";
+        // Traitez les données reçues ici
+        // Par exemple, bouclez sur chaque objet dans le tableau de données et ajoutez-le à votre HTML
+        data.forEach(function (activity) {
+          activitiesHTML += `
               <div class="slider-item">
                 <div class="activity" onclick="window.location.href = '${activity.href}';">
                   <img src="${activity.imagesrc}" alt="">
@@ -30,32 +30,32 @@ window.onload = function () {
                 </div>
               </div>
             `;
-                });
-                document.querySelector('#activities').innerHTML = `
+        });
+        document.querySelector('#activities').innerHTML = `
             <div class="slider-container">
               ${activitiesHTML}
             </div>
         `;
-            })
-            .catch(error => {
-                console.error("Error fetching activities", error);
-            });
+      })
+      .catch(error => {
+        console.error("Error fetching activities", error);
+      });
 
-        fetchExhibitionData();
-    }
+    fetchExhibitionData();
+  }
 
-    async function fetchExhibitionData() {
-        document.querySelector("#exhibitions").innerHTML = '<img src="images/Spinner-1s-200px.gif" alt="Loading">';
+  async function fetchExhibitionData() {
+    document.querySelector("#exhibitions").innerHTML = '<img src="images/Spinner-1s-200px.gif" alt="Loading">';
 
-        await fetch("http://localhost:3000/museumExhibitions")
-            .then(response => response.json())
-            .then(data => {
+    await fetch("http://localhost:3000/museumExhibitions")
+      .then(response => response.json())
+      .then(data => {
 
-                // Traitez les données reçues ici
-                // Par exemple, bouclez sur chaque objet dans le tableau de données et ajoutez-le à votre HTML
-                let exhibitionHTML = "";
-                data.forEach(function (exhibition) {
-                    exhibitionHTML += `
+        // Traitez les données reçues ici
+        // Par exemple, bouclez sur chaque objet dans le tableau de données et ajoutez-le à votre HTML
+        let exhibitionHTML = "";
+        data.forEach(function (exhibition) {
+          exhibitionHTML += `
               <div class="exhibition">
                 <img src="${exhibition.imagesrc}" alt="">
                 <div class="exhi-text">
@@ -65,12 +65,32 @@ window.onload = function () {
                 </div>
               </div>
             `;
-                });
-                document.querySelector("#exhibitions").innerHTML = exhibitionHTML;
-            })
-            .catch(error => {
-                console.error("Error fetching exhibitions", error);
-            });
+        });
+        document.querySelector("#exhibitions").innerHTML = exhibitionHTML;
+      })
+      .catch(error => {
+        console.error("Error fetching exhibitions", error);
+      });
+  }
+
+
+  const select = document.querySelector(".selection");
+  select.addEventListener("change", function () {
+    const selectedOption = select.options[select.selectedIndex].text;
+    const exhibitions = document.querySelectorAll(".exhi-text h4");
+    for (let exhibition of exhibitions) {
+      if (exhibition.textContent === selectedOption) {
+        exhibition.scrollIntoView({
+          behavior: "smooth"
+        });
+        exhibition.classList.add("selected");
+        setTimeout(() => {
+          exhibition.classList.remove("selected");
+        }, 2000);
+        break;
+      }
     }
+  });
+
 
 };
