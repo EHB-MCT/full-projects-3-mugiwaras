@@ -3,7 +3,7 @@
 window.onload = function () {
   fetchActivitiesData();
 
-
+  //backend requests
   async function fetchActivitiesData() {
     document.querySelector("#slider-container").innerHTML = '<img src="images/Spinner-1s-200px.gif" alt="Loading">';
 
@@ -12,8 +12,8 @@ window.onload = function () {
       .then(data => {
 
         let activitiesHTML = "";
-        // Traitez les données reçues ici
-        // Par exemple, bouclez sur chaque objet dans le tableau de données et ajoutez-le à votre HTML
+
+
         data.forEach(function (activity) {
           activitiesHTML += `
               <div class="slider-item">
@@ -51,8 +51,6 @@ window.onload = function () {
       .then(response => response.json())
       .then(data => {
 
-        // Traitez les données reçues ici
-        // Par exemple, bouclez sur chaque objet dans le tableau de données et ajoutez-le à votre HTML
         let exhibitionHTML = "";
         data.forEach(function (exhibition) {
           exhibitionHTML += `
@@ -73,7 +71,7 @@ window.onload = function () {
       });
   }
 
-
+  //animation redirection
   const select = document.querySelector(".selection");
   select.addEventListener("change", function () {
     const selectedOption = select.options[select.selectedIndex].text;
@@ -91,6 +89,27 @@ window.onload = function () {
       }
     }
   });
+
+  //popup
+  const popup = document.getElementById("popup");
+  const handicapBtn = document.getElementById("handicap-btn");
+  const normalBtn = document.getElementById("normal-btn");
+
+  handicapBtn.addEventListener("click", function () {
+    sessionStorage.setItem("mode", "handicap");
+    popup.style.display = "none";
+  });
+
+  normalBtn.addEventListener("click", function () {
+    sessionStorage.setItem("mode", "normal");
+    popup.style.display = "none";
+  });
+
+  if (!sessionStorage.getItem("mode")) {
+    popup.style.display = "flex";
+  } else {
+    popup.style.display = "none";
+  }
 
 
 };

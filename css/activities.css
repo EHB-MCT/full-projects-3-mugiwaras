@@ -215,3 +215,48 @@ h4 {
   height: 92%;
 
 }
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+
+}
+
+.popup-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  margin: 0 15px;
+  border: 3px solid rgba(26, 97, 107, 0.9);
+}
+
+.popup-content button {
+  margin: 10px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-color: lightgray;
+  border: none;
+  cursor: pointer;
+}
+
+.popup-content p {
+  margin: 20px 0;
+}
+
+.popup-content button {
+  background-color: rgba(26, 97, 107, 0.9);
+  color: white;
+}
+
+#normal-btn {
+  width: 65px;
+}
