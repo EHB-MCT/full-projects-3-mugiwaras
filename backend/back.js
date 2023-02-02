@@ -26,7 +26,7 @@ app.get('/museumActivities', async (req, res) => {
         res.status(200).send(exhibitions);
     } catch (error) {
         // Gestion des erreurs
-        res.status(500).send({
+        res.status(500).send({ 
             error: 'Something went wrong',
             value: error
         });
