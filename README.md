@@ -9,7 +9,8 @@ Voor Fullproject 3 hebben we een webapp voor een museum ontwikkeld waar bezoeker
 ### Design 
 
 - xd file = https://xd.adobe.com/view/09428f8f-0147-486d-b778-87e1f2693efa-5c11/screen/a98bab3b-f6ac-43f4-9f9f-459b2699af1c
-
+- iconen = https://www.flaticon.com/free-icons/web
+- gifs = https://loading.io/
 
 ### Backend sources
 
